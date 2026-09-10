@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Versión de .NET usada por RimWorld -->
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>KaynMod</RootNamespace>
+    <AssemblyName>KaynMod</AssemblyName>
+
+    <!-- Evita que cree subcarpetas como 'bin/Debug/net48' -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+    <!-- Ruta donde se guardará directamente el .dll compilado -->
+    <!-- AJUSTA ESTA RUTA según dónde tengas tu carpeta del mod en RimWorld -->
+    <OutputPath>C:\Games\RimWorld\Mods\KaynMod\Assemblies</OutputPath>
+  </PropertyGroup>
+
+  <!-- Referencias a las librerías del propio RimWorld -->
+  <ItemGroup>
+    <!-- NOTA: Cambia "C:\Program Files (x86)\Steam\steamapps\common\RimWorld" por tu ruta real de instalación -->
+    
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Games\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <!-- Private=false evita que copie Assembly-CSharp.dll dentro de la carpeta de tu mod -->
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Games\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Esto descarga automáticamente las librerías necesarias de .NET 4.8 -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

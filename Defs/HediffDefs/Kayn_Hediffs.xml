@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Hediff de Esencia con Batería Psíquica -->
+  <HediffDef>
+    <defName>Kayn_Awakened</defName>
+    <label>Esencia de Kayn</label>
+    <description>Este ser contiene una fracción del poder primordial de Kayn. Su mente trasciende los límites físicos: su calor neuronal se disipa al instante y su psicofoco permanece siempre en su cúspide.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.2, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <becomeVisible>true</becomeVisible>
+        <statOffsets>
+          <!-- Sensibilidad psíquica y enfriamiento masivo -->
+          <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+          <PsychicEntropyMax>500</PsychicEntropyMax>
+          <PsychicSensitivity>2.0</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <!-- COMPONENTE: Psicofoco permanente al 100%, Calor a 0 y Psylink 6 -->
+      <li Class="KaynMod.HediffCompProperties_KaynPsycastBattery" />
+    </comps>
+  </HediffDef>
+
+  <!-- Velo de Sombras (invisibilidad) -->
+  <HediffDef>
+    <defName>Kayn_Invisibility</defName>
+    <label>Velo de Sombras</label>
+    <description>Oculta al ser de la percepción física y psicológica de los demás. No caduca con el tiempo.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.6, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <compClass>HediffComp_Invisibility</compClass>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+</Defs>

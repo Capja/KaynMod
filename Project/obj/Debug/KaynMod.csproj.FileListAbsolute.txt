@@ -1,0 +1,9 @@
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.csproj.AssemblyReference.cache
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.AssemblyInfoInputs.cache
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.AssemblyInfo.cs
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.csproj.CoreCompileInputs.cache
+C:\Games\RimWorld\Mods\KaynMod\Assemblies\KaynMod.dll
+C:\Games\RimWorld\Mods\KaynMod\Assemblies\KaynMod.pdb
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.dll
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.pdb

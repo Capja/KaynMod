@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 1. Habilidad Invisible -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Test_Invisible</defName>
+    <label>Pulso Fantasma</label>
+    <description>Efecto imperceptible sin luz ni sonido.</description>
+    <range>20</range>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <isKaynActionVisible>false</isKaynActionVisible>
+    <hasVisualEffect>false</hasVisualEffect>
+    <acousticRadius>0</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 2. Chispa Remota -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Test_Flame</defName>
+    <label>Chispa Remota</label>
+    <description>Enciende un fuego a distancia.</description>
+    <workerClass>KaynMod.Worker_Flame</workerClass>
+    <iconPath>UI/Commands/FireAtWill</iconPath>
+    <range>15</range>
+    <isKaynActionVisible>false</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>5</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 3. Presión Mental -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Test_TargetPawn</defName>
+    <label>Presión Mental</label>
+    <description>Aturde a un Pawn a distancia.</description>
+    <workerClass>KaynMod.Worker_Stun</workerClass>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <range>25</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>false</hasVisualEffect>
+    <acousticRadius>0</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 4. Fisura Abisal -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Test_Cataclysm</defName>
+    <label>Fisura Abisal</label>
+    <description>Explosión masiva.</description>
+    <workerClass>KaynMod.Worker_Cataclysm</workerClass>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <range>35</range>
+    <explosionRadius>4.9</explosionRadius>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>50</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 5. Transferir Esencia -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Awaken_Other</defName>
+    <label>Transferir Esencia</label>
+    <description>Despierta a otro portador.</description>
+    <workerClass>KaynMod.Worker_Awaken</workerClass>
+    <iconPath>UI/Commands/Halt</iconPath>
+    <range>3</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>10</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 6. Velo de Sombras -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Toggle_Invisibility</defName>
+    <label>Velo de Sombras</label>
+    <description>Invisibilidad permanente tipo toggle.</description>
+    <workerClass>KaynMod.Worker_ToggleInvisibility</workerClass>
+    <iconPath>UI/Designators/ForbidOff</iconPath>
+    <range>20</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>false</isKaynActionVisible>
+    <hasVisualEffect>false</hasVisualEffect>
+    <acousticRadius>0</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 7. Teletransporte (Paso Sombrío) -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Teleport</defName>
+    <label>Paso Sombrío</label>
+    <description>Teletransporte instantáneo atravesando muros.</description>
+    <workerClass>KaynMod.Worker_Teleport</workerClass>
+    <iconPath>UI/Commands/Draft</iconPath>
+    <range>30</range>
+    <targetMustBePawn>false</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>6</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+  <!-- 8. Curar Heridas -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Heal_Wounds</defName>
+    <label>Restauración Sombría</label>
+    <description>Cierra heridas físicas sin tocar otros hediffs.</description>
+    <workerClass>KaynMod.Worker_HealWounds</workerClass>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <range>20</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>false</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>0</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
+</Defs>
