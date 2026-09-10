@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Hereda de BaseWeapon: Sin recetas de forja ni fabricación en ninguna mesa -->
+  <ThingDef ParentName="BaseWeapon">
+    <defName>Kayn_ShadowScythe</defName>
+    <label>Guadaña de Sombras</label>
+    <description>Una manifestación física del poder de Kayn condensado en una guadaña etérea. Corta carne, blindajes y mecas como si fueran papel, y se disuelve en el aire cuando su portador no la necesita.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.35</drawSize>
+      <color>(35, 25, 55)</color>
+    </graphicData>
+    
+    <techLevel>Ultra</techLevel>
+    <tradeability>None</tradeability>       <!-- No se vende a comerciantes -->
+    <destroyOnDrop>true</destroyOnDrop>     <!-- Se disuelve si cae al suelo -->
+    <useHitPoints>false</useHitPoints>       <!-- Indestructible: no pierde durabilidad -->
+    <smeltable>false</smeltable>             <!-- No se puede fundir en hornos -->
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <statBases>
+      <MarketValue>0</MarketValue>          <!-- Valor 0 para no inflar asaltos -->
+      <Mass>0.1</Mass>
+    </statBases>
+
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+
+    <tools>
+      <li>
+        <label>filo de sombras</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>45</power>
+        <armorPenetration>1.10</armorPenetration> <!-- 110% perforación -->
+        <cooldownTime>1.1</cooldownTime>
+      </li>
+      <li>
+        <label>corte abisal</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>40</power>
+        <armorPenetration>1.40</armorPenetration> <!-- 140% perforación -->
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+
+    <weaponTags>
+      <li>KaynUniqueWeapon</li>
+    </weaponTags>
+  </ThingDef>
+
+</Defs>

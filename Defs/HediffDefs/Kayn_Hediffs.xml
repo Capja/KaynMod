@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- ÚNICO HEDIFF EN SALUD: Contiene la regeneración pasiva, la batería y las 3 fases -->
+  <!-- Esencia de Kayn: Salud limpia, Habilidades a 20 y Estadísticas Divinas -->
   <HediffDef>
     <defName>Kayn_Awakened</defName>
     <label>Esencia de Kayn</label>
-    <description>Contiene el poder primordial de Kayn. Proporciona regeneración celular inmediata, disipación instantánea del calor psíquico y control sobre su fuerza física latente.</description>
+    <description>Contiene el poder primordial de Kayn. Otorga maestría absoluta en cualquier disciplina física o intelectual, regeneración celular constante y la capacidad de desatar su fuerza sobrehumana.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.6, 0.2, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
     <initialSeverity>0.1</initialSeverity>
     <stages>
-      <!-- FASE 0 (Severidad 0.0 - 0.9): Contenido (+0%) -->
+
+      <!-- ================= FASE 0: CONTENIDO (+0%) ================= -->
       <li>
         <label>Contenido</label>
         <becomeVisible>true</becomeVisible>
@@ -22,61 +23,114 @@
         </statOffsets>
       </li>
 
-      <!-- FASE 1 (Severidad 1.0 - 1.9): Despertado (+500%) -->
+      <!-- ================= FASE 1: DESPERTADO (+500%) ================= -->
       <li>
         <minSeverity>1.0</minSeverity>
         <label>Despertado (+500%)</label>
         <becomeVisible>true</becomeVisible>
+        <!-- Capacidades de la pestaña Salud -->
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>5.0</offset> <!-- +500% Movimiento -->
+            <offset>5.0</offset>        <!-- +500% Movimiento -->
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>5.0</offset> <!-- +500% Manipulación -->
+            <offset>5.0</offset>        <!-- +500% Manipulación -->
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>5.0</offset>        <!-- +200% Vista -->
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>5.0</offset>        <!-- +100% Consciencia -->
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>5.0</offset>        <!-- +100% Oído -->
           </li>
         </capMods>
+        <!-- Estadísticas físicas, de trabajo y combate -->
         <statOffsets>
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
-          <WorkSpeedGlobal>5.0</WorkSpeedGlobal>     <!-- +500% Velocidad de trabajo -->
-          <CarryingCapacity>500</CarryingCapacity>    <!-- +500 kg de carga -->
-          <MeleeDodgeChance>25</MeleeDodgeChance>
+          <WorkSpeedGlobal>5.0</WorkSpeedGlobal>          <!-- +500% Velocidad de trabajo -->
+          <CarryingCapacity>500</CarryingCapacity>         <!-- +500 kg de carga -->
+          <MeleeDodgeChance>30</MeleeDodgeChance>          <!-- Gran evasión -->
+          <ShootingAccuracyPawn>15</ShootingAccuracyPawn>  <!-- Puntería de élite -->
+          <ComfyTemperatureMin>-50</ComfyTemperatureMin>   <!-- Resistencia al frío -->
+          <ComfyTemperatureMax>50</ComfyTemperatureMax>    <!-- Resistencia al calor -->
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>3.0</MeleeDamageFactor>       <!-- x3 daño cuerpo a cuerpo -->
+          <IncomingDamageFactor>0.6</IncomingDamageFactor> <!-- Recibe un 40% menos de daño -->
+          <MeleeCooldownFactor>0.5</MeleeCooldownFactor>       <!-- Golpea el doble de rápido CaC -->
+          <AimingDelayFactor>0.4</AimingDelayFactor>           <!-- Apunta 2.5 veces más rápido -->
+          <RangedCooldownFactor>0.5</RangedCooldownFactor>
+        </statFactors>
       </li>
 
-      <!-- FASE 2 (Severidad 2.0+): Liberado (+1000%) -->
+      <!-- ================= FASE 2: LIBERADO (+1000%) ================= -->
       <li>
         <minSeverity>2.0</minSeverity>
         <label>Liberado (+1000%)</label>
         <becomeVisible>true</becomeVisible>
+        <!-- Capacidades de la pestaña Salud -->
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>10.0</offset> <!-- +1000% Movimiento -->
+            <offset>10.0</offset>       <!-- +1000% Movimiento -->
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>10.0</offset> <!-- +1000% Manipulación -->
+            <offset>10.0</offset>       <!-- +1000% Manipulación -->
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>10.0</offset>        <!-- +500% Vista -->
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>10.0</offset>        <!-- +200% Consciencia (inmune al K.O.) -->
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>10.0</offset>        <!-- +300% Oído -->
           </li>
         </capMods>
+        <!-- Estadísticas físicas, de trabajo y combate divinas -->
         <statOffsets>
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
-          <WorkSpeedGlobal>10.0</WorkSpeedGlobal>   <!-- +1000% Velocidad de trabajo -->
-          <CarryingCapacity>1000</CarryingCapacity>  <!-- +1000 kg de carga -->
-          <MeleeDodgeChance>50</MeleeDodgeChance>
+          <WorkSpeedGlobal>10.0</WorkSpeedGlobal>          <!-- +1000% Velocidad de trabajo -->
+          <CarryingCapacity>1000</CarryingCapacity>        <!-- +1000 kg de carga -->
+          <MeleeDodgeChance>90</MeleeDodgeChance>          <!-- Casi intocable -->
+          <ShootingAccuracyPawn>80</ShootingAccuracyPawn>  <!-- Disparo infalible -->
+          <ToxicResistance>1.0</ToxicResistance>           <!-- Inmune a toxinas y gas -->
+          <ComfyTemperatureMin>-150</ComfyTemperatureMin> <!-- Sobrevive al vacío helado -->
+          <ComfyTemperatureMax>150</ComfyTemperatureMax>  <!-- Sobrevive a hornos ardientes -->
         </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>10.0</MeleeDamageFactor>       <!-- x6 daño cuerpo a cuerpo brutal -->
+          <IncomingDamageFactor>0.2</IncomingDamageFactor> <!-- Reduce el 80% de todo el daño recibido -->
+          <MeleeCooldownFactor>0.2</MeleeCooldownFactor>       <!-- Golpea el doble de rápido CaC -->
+          <AimingDelayFactor>0.1</AimingDelayFactor>           <!-- Apunta 2.5 veces más rápido -->
+          <RangedCooldownFactor>0.2</RangedCooldownFactor>
+          <Flammability>0</Flammability>                   <!-- El fuego no puede prenderle -->
+        </statFactors>
       </li>
+
     </stages>
     <comps>
       <!-- Regeneración pasiva automática de heridas -->
       <li Class="KaynMod.HediffCompProperties_KaynRegeneration" />
       <!-- Batería psíquica: Psicofoco 100%, Calor 0, Psylink 6 y puntos VPE -->
       <li Class="KaynMod.HediffCompProperties_KaynPsycastBattery" />
+      <!-- Maestría absoluta: Todas las habilidades a 20 fijas -->
+      <li Class="KaynMod.HediffCompProperties_KaynMastery" />
     </comps>
   </HediffDef>
 

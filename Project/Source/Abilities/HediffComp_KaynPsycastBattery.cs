@@ -15,28 +15,32 @@ namespace KaynMod
 
     public class HediffComp_KaynPsycastBattery : HediffComp
     {
+        public override void CompPostMake()
+        {
+            base.CompPostMake();
+            EnsureBasePsylink();
+        }
+
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
 
-            // Comprobación periódica cada 30 ticks (medio segundo)
             if (Pawn != null && Pawn.IsHashIntervalTick(30))
             {
-                // 1. Enlace psíquico vanilla nivel 6
-                if (ModLister.RoyaltyInstalled && Pawn.GetPsylinkLevel() < 6)
+                // Solo otorga psylink si el peón no tiene absolutamente ningún nivel (nivel 0)
+                if (ModLister.RoyaltyInstalled && Pawn.GetPsylinkLevel() == 0)
                 {
-                    Pawn.ChangePsylinkLevel(6, false);
+                    EnsureBasePsylink();
                 }
 
-                // 2. Control de calor a 0 y psicofoco al 100%
+                // 1. Control de calor neuronal a cero y psicofoco permanente al 100%
                 if (Pawn.psychicEntropy != null)
                 {
                     Pawn.psychicEntropy.RemoveAllEntropy();
                     Pawn.psychicEntropy.OffsetPsyfocusDirectly(1.0f);
                 }
 
-                // 3. COMPATIBILIDAD CON VANILLA PSYCASTS EXPANDED (VPE)
-                // Otorga 100 puntos de habilidad psiónica para desbloquear los árboles completos
+                // 2. Mantener puntos de habilidad en Vanilla Psycasts Expanded (VPE) sin spamear niveles
                 if (Pawn.health?.hediffSet != null)
                 {
                     var vpeHediff = Pawn.health.hediffSet.hediffs
@@ -55,6 +59,16 @@ namespace KaynMod
                         }
                     }
                 }
+            }
+        }
+
+        private void EnsureBasePsylink()
+        {
+            // Otorga nivel 6 una sola vez y sin enviar cartas
+            if (ModLister.RoyaltyInstalled && Pawn != null && Pawn.GetPsylinkLevel() < 6)
+            {
+                int needed = 6 - Pawn.GetPsylinkLevel();
+                Pawn.ChangePsylinkLevel(needed, false);
             }
         }
     }

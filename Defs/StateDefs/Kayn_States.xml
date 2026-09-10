@@ -5,7 +5,7 @@
   <KaynMod.KaynStateDef>
     <defName>KaynState_Contained</defName>
     <label>Contenido</label>
-    <description>Poder completamente contenido (+0%). Kayn rinde como un humano ordinario.</description>
+    <description>Poder físico contenido (+0%). Kayn se camufla como un humano corriente, aunque conserva su maestría intelectual y regeneración latente.</description>
     <order>0</order>
     <hediffSeverity>0.1</hediffSeverity>
     <iconPath>UI/Commands/DesirePower</iconPath>
@@ -18,7 +18,7 @@
   <KaynMod.KaynStateDef>
     <defName>KaynState_Awakened</defName>
     <label>Despertado (+500%)</label>
-    <description>Liberación media. Aumenta un 500% el movimiento, manipulación y velocidad de trabajo.</description>
+    <description>Fuerza sobrehumana desatada.\n• +500% Movimiento, Manipulación y Trabajo\n• +200% Vista y +100% Consciencia\n• x3 daño cuerpo a cuerpo y 40% reducción de daño recibido\n• Resistencia térmica de -50°C a +50°C</description>
     <order>1</order>
     <hediffSeverity>1.0</hediffSeverity>
     <iconPath>UI/Commands/DesirePower</iconPath>
@@ -31,7 +31,7 @@
   <KaynMod.KaynStateDef>
     <defName>KaynState_Released</defName>
     <label>Liberado (+1000%)</label>
-    <description>Liberación absoluta. Aumenta un 1000% el movimiento, manipulación y velocidad de trabajo.</description>
+    <description>Poder primordial absoluto.\n• +1000% Movimiento, Manipulación y Trabajo\n• +500% Vista y +200% Consciencia\n• x6 daño cuerpo a cuerpo y 80% reducción de daño recibido\n• Inmunidad al fuego, gases tóxicos y temperaturas extremas (-150°C a +150°C)</description>
     <order>2</order>
     <hediffSeverity>2.0</hediffSeverity>
     <iconPath>UI/Commands/DesirePower</iconPath>

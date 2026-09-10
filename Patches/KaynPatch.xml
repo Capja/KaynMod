@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+  <!-- Inyecta el componente en BasePawn: Todas las razas (humanos, wolfkin, etc.) lo heredan automáticamente -->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="Human"]/comps</xpath>
+    <xpath>Defs/ThingDef[@Name="BasePawn"]/comps</xpath>
     <value>
       <li>
         <compClass>KaynMod.CompKayn</compClass>

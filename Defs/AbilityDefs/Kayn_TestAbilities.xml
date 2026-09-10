@@ -138,4 +138,18 @@
     <acousticRadius>15</acousticRadius> <!-- El desgarro del velo mortal se escucha a 15 casillas -->
   </KaynMod.KaynAbilityDef>
 
+  <!-- 11. Guadaña de Sombras -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Summon_Scythe</defName>
+    <label>Guadaña de Sombras</label>
+    <description>Invoca o disipa instantáneamente el arma primordial de Kayn. Corta blindajes pesados ignorando defensas convencionales y se disuelve en el aire cuando su portador no la necesita.</description>
+    <workerClass>KaynMod.Worker_ShadowScythe</workerClass>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <range>1</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>6</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
 </Defs>
