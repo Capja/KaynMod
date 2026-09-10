@@ -7,3 +7,4 @@ C:\Games\RimWorld\Mods\KaynMod\Assemblies\KaynMod.dll
 C:\Games\RimWorld\Mods\KaynMod\Assemblies\KaynMod.pdb
 C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.dll
 C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.pdb
+C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.sourcelink.json

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Estado 0: Contenido (+0%) -->
+  <KaynMod.KaynStateDef>
+    <defName>KaynState_Contained</defName>
+    <label>Contenido</label>
+    <description>Poder completamente contenido (+0%). Kayn rinde como un humano ordinario.</description>
+    <order>0</order>
+    <hediffSeverity>0.1</hediffSeverity>
+    <iconPath>UI/Commands/DesirePower</iconPath>
+    <iconColor>(0.6, 0.6, 0.6)</iconColor>
+    <moteText>Esencia: Contenida</moteText>
+    <moteColor>(0.6, 0.6, 0.6)</moteColor>
+  </KaynMod.KaynStateDef>
+
+  <!-- Estado 1: Despertado (+500%) -->
+  <KaynMod.KaynStateDef>
+    <defName>KaynState_Awakened</defName>
+    <label>Despertado (+500%)</label>
+    <description>Liberación media. Aumenta un 500% el movimiento, manipulación y velocidad de trabajo.</description>
+    <order>1</order>
+    <hediffSeverity>1.0</hediffSeverity>
+    <iconPath>UI/Commands/DesirePower</iconPath>
+    <iconColor>(0.3, 0.8, 1.0)</iconColor>
+    <moteText>Esencia: Despertada (+500%)</moteText>
+    <moteColor>(0.3, 0.8, 1.0)</moteColor>
+  </KaynMod.KaynStateDef>
+
+  <!-- Estado 2: Liberado (+1000%) -->
+  <KaynMod.KaynStateDef>
+    <defName>KaynState_Released</defName>
+    <label>Liberado (+1000%)</label>
+    <description>Liberación absoluta. Aumenta un 1000% el movimiento, manipulación y velocidad de trabajo.</description>
+    <order>2</order>
+    <hediffSeverity>2.0</hediffSeverity>
+    <iconPath>UI/Commands/DesirePower</iconPath>
+    <iconColor>(1.0, 0.3, 0.2)</iconColor>
+    <moteText>Esencia: ¡LIBERADA! (+1000%)</moteText>
+    <moteColor>(1.0, 0.3, 0.2)</moteColor>
+  </KaynMod.KaynStateDef>
+
+</Defs>

@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = KaynMod
-build_property.ProjectDir = C:\Games\RimWorld\Mods\KaynMod\Project\
+build_property.ProjectDir = C:\Games\RimWorld\Mods\KaynMod\project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

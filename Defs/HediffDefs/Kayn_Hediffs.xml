@@ -1,36 +1,90 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Hediff de Esencia con Batería Psíquica -->
+  <!-- ÚNICO HEDIFF EN SALUD: Contiene la regeneración pasiva, la batería y las 3 fases -->
   <HediffDef>
     <defName>Kayn_Awakened</defName>
     <label>Esencia de Kayn</label>
-    <description>Este ser contiene una fracción del poder primordial de Kayn. Su mente trasciende los límites físicos: su calor neuronal se disipa al instante y su psicofoco permanece siempre en su cúspide.</description>
+    <description>Contiene el poder primordial de Kayn. Proporciona regeneración celular inmediata, disipación instantánea del calor psíquico y control sobre su fuerza física latente.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.6, 0.2, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
+    <initialSeverity>0.1</initialSeverity>
     <stages>
+      <!-- FASE 0 (Severidad 0.0 - 0.9): Contenido (+0%) -->
       <li>
+        <label>Contenido</label>
         <becomeVisible>true</becomeVisible>
         <statOffsets>
-          <!-- Sensibilidad psíquica y enfriamiento masivo -->
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
         </statOffsets>
       </li>
+
+      <!-- FASE 1 (Severidad 1.0 - 1.9): Despertado (+500%) -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>Despertado (+500%)</label>
+        <becomeVisible>true</becomeVisible>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>5.0</offset> <!-- +500% Movimiento -->
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>5.0</offset> <!-- +500% Manipulación -->
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+          <PsychicEntropyMax>500</PsychicEntropyMax>
+          <PsychicSensitivity>2.0</PsychicSensitivity>
+          <WorkSpeedGlobal>5.0</WorkSpeedGlobal>     <!-- +500% Velocidad de trabajo -->
+          <CarryingCapacity>500</CarryingCapacity>    <!-- +500 kg de carga -->
+          <MeleeDodgeChance>25</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+
+      <!-- FASE 2 (Severidad 2.0+): Liberado (+1000%) -->
+      <li>
+        <minSeverity>2.0</minSeverity>
+        <label>Liberado (+1000%)</label>
+        <becomeVisible>true</becomeVisible>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>10.0</offset> <!-- +1000% Movimiento -->
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>10.0</offset> <!-- +1000% Manipulación -->
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+          <PsychicEntropyMax>500</PsychicEntropyMax>
+          <PsychicSensitivity>2.0</PsychicSensitivity>
+          <WorkSpeedGlobal>10.0</WorkSpeedGlobal>   <!-- +1000% Velocidad de trabajo -->
+          <CarryingCapacity>1000</CarryingCapacity>  <!-- +1000 kg de carga -->
+          <MeleeDodgeChance>50</MeleeDodgeChance>
+        </statOffsets>
+      </li>
     </stages>
     <comps>
-      <!-- COMPONENTE: Psicofoco permanente al 100%, Calor a 0 y Psylink 6 -->
+      <!-- Regeneración pasiva automática de heridas -->
+      <li Class="KaynMod.HediffCompProperties_KaynRegeneration" />
+      <!-- Batería psíquica: Psicofoco 100%, Calor 0, Psylink 6 y puntos VPE -->
       <li Class="KaynMod.HediffCompProperties_KaynPsycastBattery" />
     </comps>
   </HediffDef>
 
-  <!-- Velo de Sombras (invisibilidad) -->
+  <!-- Velo de Sombras (Invisibilidad) -->
   <HediffDef>
     <defName>Kayn_Invisibility</defName>
     <label>Velo de Sombras</label>
-    <description>Oculta al ser de la percepción física y psicológica de los demás. No caduca con el tiempo.</description>
+    <description>Oculta al ser de la percepción física y psicológica de los demás.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.4, 0.6, 0.9)</defaultLabelColor>
     <isBad>false</isBad>

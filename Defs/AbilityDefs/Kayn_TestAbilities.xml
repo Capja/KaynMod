@@ -110,4 +110,18 @@
     <acousticRadius>0</acousticRadius>
   </KaynMod.KaynAbilityDef>
 
+  <!-- 9. Regenerar Miembros (Kayn o aliados) -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Regenerate_Limbs</defName>
+    <label>Restaurar Miembros</label>
+    <description>Reconstituye instantáneamente cualquier brazo, pierna u órgano cercenado en uno mismo o en un colono aliado. Es una manifestación visual evidente ante cualquier testigo.</description>
+    <workerClass>KaynMod.Worker_RegenerateLimbs</workerClass>
+    <iconPath>UI/Icons/Medical/Tend</iconPath>
+    <range>15</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>8</acousticRadius>
+  </KaynMod.KaynAbilityDef>
+
 </Defs>
