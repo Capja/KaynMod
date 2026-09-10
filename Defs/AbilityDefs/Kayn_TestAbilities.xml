@@ -124,4 +124,18 @@
     <acousticRadius>8</acousticRadius>
   </KaynMod.KaynAbilityDef>
 
+  <!-- 10. Alzar de las Sombras (Resurrección) -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Resurrect</defName>
+    <label>Alzar de las Sombras</label>
+    <description>Arranca a un ser de las garras de la muerte. Si el cadáver carecía de órganos vitales o cabeza, los recompone antes de insuflarle vida, eliminando cualquier secuela de psicosis.</description>
+    <workerClass>KaynMod.Worker_Resurrect</workerClass>
+    <iconPath>UI/Commands/DesirePower</iconPath>
+    <range>15</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>true</isKaynActionVisible>
+    <hasVisualEffect>true</hasVisualEffect>
+    <acousticRadius>15</acousticRadius> <!-- El desgarro del velo mortal se escucha a 15 casillas -->
+  </KaynMod.KaynAbilityDef>
+
 </Defs>

@@ -10,7 +10,6 @@ namespace KaynMod
         {
             if (target.Thing is Pawn targetPawn)
             {
-                // Permite a uno mismo o a cualquier miembro de la colonia
                 return targetPawn == caster || (targetPawn.Faction != null && targetPawn.Faction == caster.Faction);
             }
             return false;
@@ -20,7 +19,6 @@ namespace KaynMod
         {
             if (!(target.Thing is Pawn p) || p.health?.hediffSet == null) return;
 
-            // Busca extremidades u órganos perdidos
             var missingParts = p.health.hediffSet.GetMissingPartsCommonAncestors().ToList();
 
             if (missingParts.Count == 0)
@@ -34,6 +32,11 @@ namespace KaynMod
             {
                 p.health.RestorePart(missing.Part);
             }
+
+            // === ARREGLO VISUAL: Fuerza al motor a redibujar cabeza, pelo, ojos y extremidades ===
+            p.Drawer?.renderer?.SetAllGraphicsDirty();
+            PortraitsCache.SetDirty(p);
+            GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(p);
 
             MoteMaker.ThrowText(p.DrawPos, p.Map, "¡Miembros Regenerados!", UnityEngine.Color.green);
             FleckMaker.ThrowDustPuff(p.Position.ToVector3Shifted(), p.Map, 2.0f);

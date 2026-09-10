@@ -11,6 +11,7 @@ namespace KaynMod
             var targetParams = new TargetingParameters
             {
                 canTargetPawns = true,
+                canTargetCorpses = true, 
                 canTargetLocations = !ability.targetMustBePawn,
                 canTargetBuildings = false,
                 canTargetSelf = true,
