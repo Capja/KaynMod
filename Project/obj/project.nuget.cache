@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sWuuHsXQ7vU=",
+  "dgSpecHash": "8apvpn7vkg0=",
   "success": true,
-  "projectFilePath": "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\KaynMod.csproj",
+  "projectFilePath": "c:\\Games\\RimWorld\\Mods\\KaynMod\\Project\\KaynMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\k\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
     "C:\\Users\\k\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
