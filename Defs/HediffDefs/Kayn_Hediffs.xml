@@ -131,6 +131,8 @@
       <li Class="KaynMod.HediffCompProperties_KaynPsycastBattery" />
       <!-- Maestría absoluta: Todas las habilidades a 20 fijas -->
       <li Class="KaynMod.HediffCompProperties_KaynMastery" />
+      <!-- Inmunidad biológica universal a cualquier enfermedad (Vanilla + Mods) -->
+      <li Class="KaynMod.HediffCompProperties_KaynImmunity" />
     </comps>
   </HediffDef>
 
@@ -148,6 +150,35 @@
       </li>
       <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
+  </HediffDef>
+
+  <!-- Hediff de Sueño / Letargo Temporal -->
+  <HediffDef>
+    <defName>Kayn_Slumber</defName>
+    <label>Letargo Umbrío</label>
+    <description>Un trance de sueño profundo inducido por las sombras. La consciencia se desvanece de inmediato, haciendo que el ser caiga dormido pacíficamente sin sufrir secuelas ni daño biológico.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.4, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <!-- Desaparece automáticamente después de un rato (~45 segundos reales / unas horas de juego) -->
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500~4000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>en trance</label>
+        <!-- Limitar la consciencia al 10% hace que caiga desplomado dormido en el acto -->
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.10</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
   </HediffDef>
 
 </Defs>

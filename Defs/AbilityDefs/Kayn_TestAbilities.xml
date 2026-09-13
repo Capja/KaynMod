@@ -152,4 +152,18 @@
     <acousticRadius>6</acousticRadius>
   </KaynMod.KaynAbilityDef>
 
+  <!-- 12. Letargo Umbrío (Dormir objetivos) -->
+  <KaynMod.KaynAbilityDef>
+    <defName>Kayn_Slumber_Ability</defName>
+    <label>Letargo Umbrío</label>
+    <description>Sume la mente de un enemigo o aliado en un sueño inmediato e ineludible. Detiene ataques, calma colapsos mentales y neutraliza guardias sin alertar a nadie.</description>
+    <workerClass>KaynMod.Worker_Slumber</workerClass>
+    <iconPath>UI/Commands/Halt</iconPath>
+    <range>22</range>
+    <targetMustBePawn>true</targetMustBePawn>
+    <isKaynActionVisible>false</isKaynActionVisible> <!-- Acción silenciosa y sutil -->
+    <hasVisualEffect>false</hasVisualEffect>
+    <acousticRadius>0</acousticRadius>               <!-- Cero ruido -->
+  </KaynMod.KaynAbilityDef>
+
 </Defs>
