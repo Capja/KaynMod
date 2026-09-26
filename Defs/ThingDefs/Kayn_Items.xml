@@ -22,14 +22,12 @@
 
     <comps>
       <li Class="CompProperties_Usable">
-        <!-- CORRECCIÓN: UseItem en lugar de UseArtifact -->
-        <useJob>UseItem</useJob>
+        <useJob>UseItem</useJob> <!-- Siempre UseItem para auto-consumo -->
         <useLabel>Despertar Esencia de Kayn</useLabel>
-        <useDuration>60</useDuration> <!-- 1 segundo de animación al absorberlo -->
+        <useDuration>60</useDuration>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>KaynMod.CompUseEffect_AwakenKayn</compClass>
-      </li>
+      <!-- Enlace directo con tipo de propiedad correcto -->
+      <li Class="KaynMod.CompProperties_UseEffect_AwakenKayn" />
     </comps>
   </ThingDef>
 

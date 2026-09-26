@@ -4,6 +4,15 @@ using Verse;
 
 namespace KaynMod
 {
+    // Clase de propiedades que hereda de CompProperties_UseEffect (elimina el InvalidCastException)
+    public class CompProperties_UseEffect_AwakenKayn : CompProperties_UseEffect
+    {
+        public CompProperties_UseEffect_AwakenKayn()
+        {
+            compClass = typeof(CompUseEffect_AwakenKayn);
+        }
+    }
+
     public class CompUseEffect_AwakenKayn : CompUseEffect
     {
         public override void DoEffect(Pawn user)
@@ -21,7 +30,7 @@ namespace KaynMod
                 Messages.Message($"{user.LabelShort} ha absorbido el Núcleo de Sombras. La Esencia de Kayn despierta en su interior.", user, MessageTypeDefOf.PositiveEvent);
             }
 
-            // === CONSUMIR EL OBJETO (Desaparece del mapa / inventario) ===
+            // Consume y destruye el objeto tras su uso
             parent.SplitOff(1).Destroy(DestroyMode.Vanish);
         }
 
