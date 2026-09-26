@@ -57,4 +57,44 @@
     </weaponTags>
   </ThingDef>
 
+  <?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- El Núcleo de Sombras: Objeto de un solo uso imposible de comerciar o lootear -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Kayn_EssenceCore</defName>
+    <label>Núcleo de las Sombras</label>
+    <description>Un cristal etéreo pulsante que contiene la totalidad del poder primordial de Kayn. Al ser consumido por un ser biológico, transmuta su organismo otorgándole inmortalidad, dominio sobre las sombras y regeneración celular absoluta. Se desintegra tras su uso.</description>
+    <graphicData>
+      <!-- Textura vanilla de neuroformador psíquico tintado de violeta sombrío -->
+      <texPath>Things/Item/Artifact/PsychicAmplifier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <color>(130, 45, 195)</color>
+    </graphicData>
+
+    <!-- BLOQUEOS TOTALES DE GENERACIÓN EN EL MUNDO -->
+    <tradeability>None</tradeability>       <!-- Nunca aparecerá en caravanas ni tiendas -->
+    <techLevel>Ultra</techLevel>
+    <thingCategories IsNull="True" />        <!-- No entra en categorías de almacén comunes -->
+    <statBases>
+      <MarketValue>0</MarketValue>          <!-- Valor 0 para no inflar la dificultad del juego -->
+      <Mass>0.2</Mass>
+      <DeteriorationRate>0</DeteriorationRate> <!-- No se deteriora si queda a la intemperie -->
+    </statBases>
+
+    <!-- COMPONENTES DE USO -->
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Despertar Esencia de Kayn</useLabel>
+      </li>
+      <li>
+        <compClass>KaynMod.CompUseEffect_AwakenKayn</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
+
 </Defs>

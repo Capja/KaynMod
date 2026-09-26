@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>Kayn_Awakening_Scenario</defName>
+    <label>El Despertar de Kayn</label>
+    <description>Un único superviviente despierta en una tierra desconocida portando un artefacto que desafía la realidad. El poder está en sus manos, pero usarlo a la vista del mundo atraerá miradas indeseadas.\n\n(Escenario oficial del mod de Kayn).</description>
+    <scenario>
+      <summary>Un colono solitario que comienza con el Núcleo de las Sombras.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- 1 Colono inicial -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+
+        <!-- Genera con el Núcleo de las Sombras en el suelo -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Kayn_EssenceCore</thingDef>
+          <count>1</count>
+        </li>
+
+        <!-- Provisiones iniciales estándar -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>10</count>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>
