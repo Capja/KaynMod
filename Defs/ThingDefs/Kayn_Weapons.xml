@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Hereda de BaseWeapon: Sin recetas de forja ni fabricación en ninguna mesa -->
   <ThingDef ParentName="BaseWeapon">
     <defName>Kayn_ShadowScythe</defName>
     <label>Guadaña de Sombras</label>
@@ -14,14 +13,14 @@
     </graphicData>
     
     <techLevel>Ultra</techLevel>
-    <tradeability>None</tradeability>       <!-- No se vende a comerciantes -->
-    <destroyOnDrop>true</destroyOnDrop>     <!-- Se disuelve si cae al suelo -->
-    <useHitPoints>false</useHitPoints>       <!-- Indestructible: no pierde durabilidad -->
-    <smeltable>false</smeltable>             <!-- No se puede fundir en hornos -->
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <useHitPoints>false</useHitPoints>
+    <smeltable>false</smeltable>
     <burnableByRecipe>false</burnableByRecipe>
 
     <statBases>
-      <MarketValue>0</MarketValue>          <!-- Valor 0 para no inflar asaltos -->
+      <MarketValue>0</MarketValue>
       <Mass>0.1</Mass>
     </statBases>
 
@@ -38,7 +37,7 @@
           <li>Cut</li>
         </capacities>
         <power>45</power>
-        <armorPenetration>1.10</armorPenetration> <!-- 110% perforación -->
+        <armorPenetration>1.10</armorPenetration>
         <cooldownTime>1.1</cooldownTime>
       </li>
       <li>
@@ -47,7 +46,7 @@
           <li>Stab</li>
         </capacities>
         <power>40</power>
-        <armorPenetration>1.40</armorPenetration> <!-- 140% perforación -->
+        <armorPenetration>1.40</armorPenetration>
         <cooldownTime>1.3</cooldownTime>
       </li>
     </tools>
@@ -56,45 +55,5 @@
       <li>KaynUniqueWeapon</li>
     </weaponTags>
   </ThingDef>
-
-  <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-
-  <!-- El Núcleo de Sombras: Objeto de un solo uso imposible de comerciar o lootear -->
-  <ThingDef ParentName="ResourceBase">
-    <defName>Kayn_EssenceCore</defName>
-    <label>Núcleo de las Sombras</label>
-    <description>Un cristal etéreo pulsante que contiene la totalidad del poder primordial de Kayn. Al ser consumido por un ser biológico, transmuta su organismo otorgándole inmortalidad, dominio sobre las sombras y regeneración celular absoluta. Se desintegra tras su uso.</description>
-    <graphicData>
-      <!-- Textura vanilla de neuroformador psíquico tintado de violeta sombrío -->
-      <texPath>Things/Item/Artifact/PsychicAmplifier</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.9</drawSize>
-      <color>(130, 45, 195)</color>
-    </graphicData>
-
-    <!-- BLOQUEOS TOTALES DE GENERACIÓN EN EL MUNDO -->
-    <tradeability>None</tradeability>       <!-- Nunca aparecerá en caravanas ni tiendas -->
-    <techLevel>Ultra</techLevel>
-    <thingCategories IsNull="True" />        <!-- No entra en categorías de almacén comunes -->
-    <statBases>
-      <MarketValue>0</MarketValue>          <!-- Valor 0 para no inflar la dificultad del juego -->
-      <Mass>0.2</Mass>
-      <DeteriorationRate>0</DeteriorationRate> <!-- No se deteriora si queda a la intemperie -->
-    </statBases>
-
-    <!-- COMPONENTES DE USO -->
-    <comps>
-      <li Class="CompProperties_Usable">
-        <useJob>UseArtifact</useJob>
-        <useLabel>Despertar Esencia de Kayn</useLabel>
-      </li>
-      <li>
-        <compClass>KaynMod.CompUseEffect_AwakenKayn</compClass>
-      </li>
-    </comps>
-  </ThingDef>
-
-</Defs>
 
 </Defs>
