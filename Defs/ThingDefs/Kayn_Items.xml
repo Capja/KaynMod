@@ -6,10 +6,11 @@
     <label>Núcleo de las Sombras</label>
     <description>Un cristal etéreo pulsante que contiene la totalidad del poder primordial de Kayn. Al ser consumido por un ser biológico, transmuta su organismo otorgándole inmortalidad, dominio sobre las sombras y regeneración celular absoluta. Se desintegra tras su uso.</description>
     <graphicData>
-      <texPath>Things/Item/Artifact/PsychicAmplifier</texPath>
+      <!-- Textura de artefacto del juego base tintada de violeta sombrío -->
+      <texPath>Things/Item/Artifact/PsychicSoothePulser</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.9</drawSize>
-      <color>(130, 45, 195)</color>
+      <drawSize>0.85</drawSize>
+      <color>(140, 50, 210)</color>
     </graphicData>
 
     <tradeability>None</tradeability>
