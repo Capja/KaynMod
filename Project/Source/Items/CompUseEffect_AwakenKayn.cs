@@ -10,6 +10,8 @@ namespace KaynMod
         {
             base.DoEffect(user);
 
+            if (user == null || user.health?.hediffSet == null) return;
+
             var hediffDef = HediffDef.Named(CompKayn.AwakenedHediffDefName);
             if (!user.health.hediffSet.HasHediff(hediffDef))
             {
@@ -22,6 +24,7 @@ namespace KaynMod
 
         public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
+            if (p == null) return false;
             var hediffDef = HediffDef.Named(CompKayn.AwakenedHediffDefName);
             if (p.health?.hediffSet?.HasHediff(hediffDef) == true)
             {
