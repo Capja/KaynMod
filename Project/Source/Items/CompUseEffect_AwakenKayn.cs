@@ -20,6 +20,9 @@ namespace KaynMod
                 FleckMaker.ThrowDustPuff(user.Position.ToVector3Shifted(), user.Map, 2.5f);
                 Messages.Message($"{user.LabelShort} ha absorbido el Núcleo de Sombras. La Esencia de Kayn despierta en su interior.", user, MessageTypeDefOf.PositiveEvent);
             }
+
+            // === CONSUMIR EL OBJETO (Desaparece del mapa / inventario) ===
+            parent.SplitOff(1).Destroy(DestroyMode.Vanish);
         }
 
         public override AcceptanceReport CanBeUsedBy(Pawn p)
