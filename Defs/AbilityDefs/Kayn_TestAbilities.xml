@@ -46,7 +46,7 @@
     <label>Fisura Abisal</label>
     <description>Explosión masiva.</description>
     <workerClass>KaynMod.Worker_Cataclysm</workerClass>
-    <iconPath>UI/Commands/Attack</iconPath>
+    <iconPath>UI/Abilities/Explosion</iconPath>
     <range>35</range>
     <explosionRadius>4.9</explosionRadius>
     <isKaynActionVisible>true</isKaynActionVisible>
@@ -60,7 +60,7 @@
     <label>Transferir Esencia</label>
     <description>Despierta a otro portador.</description>
     <workerClass>KaynMod.Worker_Awaken</workerClass>
-    <iconPath>UI/Commands/Halt</iconPath>
+    <iconPath>UI/Abilities/EsenciaKayn</iconPath>
     <range>3</range>
     <targetMustBePawn>true</targetMustBePawn>
     <isKaynActionVisible>true</isKaynActionVisible>
@@ -74,7 +74,7 @@
     <label>Velo de Sombras</label>
     <description>Invisibilidad permanente tipo toggle.</description>
     <workerClass>KaynMod.Worker_ToggleInvisibility</workerClass>
-    <iconPath>UI/Designators/ForbidOff</iconPath>
+    <iconPath>UI/Abilities/Invisibilidad</iconPath>
     <range>20</range>
     <targetMustBePawn>true</targetMustBePawn>
     <isKaynActionVisible>false</isKaynActionVisible>
@@ -88,7 +88,7 @@
     <label>Paso Sombrío</label>
     <description>Teletransporte instantáneo atravesando muros.</description>
     <workerClass>KaynMod.Worker_Teleport</workerClass>
-    <iconPath>UI/Commands/Draft</iconPath>
+    <iconPath>UI/Abilities/Teleport</iconPath>
     <range>30</range>
     <targetMustBePawn>false</targetMustBePawn>
     <isKaynActionVisible>true</isKaynActionVisible>
@@ -102,7 +102,7 @@
     <label>Restauración Sombría</label>
     <description>Cierra heridas físicas sin tocar otros hediffs.</description>
     <workerClass>KaynMod.Worker_HealWounds</workerClass>
-    <iconPath>UI/Commands/Attack</iconPath>
+    <iconPath>UI/Abilities/Curacion</iconPath>
     <range>20</range>
     <targetMustBePawn>true</targetMustBePawn>
     <isKaynActionVisible>false</isKaynActionVisible>
@@ -116,7 +116,7 @@
     <label>Restaurar Miembros</label>
     <description>Reconstituye instantáneamente cualquier brazo, pierna u órgano cercenado en uno mismo o en un colono aliado. Es una manifestación visual evidente ante cualquier testigo.</description>
     <workerClass>KaynMod.Worker_RegenerateLimbs</workerClass>
-    <iconPath>UI/Icons/Medical/Tend</iconPath>
+    <iconPath>UI/Abilities/recuperarMienbros</iconPath>
     <range>15</range>
     <targetMustBePawn>true</targetMustBePawn>
     <isKaynActionVisible>true</isKaynActionVisible>
