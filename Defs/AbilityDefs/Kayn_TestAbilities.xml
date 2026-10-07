@@ -89,7 +89,7 @@
     <description>Teletransporte instantáneo atravesando muros.</description>
     <workerClass>KaynMod.Worker_Teleport</workerClass>
     <iconPath>UI/Abilities/Teleport</iconPath>
-    <range>30</range>
+    <range>600</range>
     <targetMustBePawn>false</targetMustBePawn>
     <isKaynActionVisible>true</isKaynActionVisible>
     <hasVisualEffect>true</hasVisualEffect>
@@ -103,7 +103,7 @@
     <description>Cierra heridas físicas sin tocar otros hediffs.</description>
     <workerClass>KaynMod.Worker_HealWounds</workerClass>
     <iconPath>UI/Abilities/Curacion</iconPath>
-    <range>20</range>
+    <range>200</range>
     <targetMustBePawn>true</targetMustBePawn>
     <isKaynActionVisible>false</isKaynActionVisible>
     <hasVisualEffect>true</hasVisualEffect>
