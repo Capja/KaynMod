@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\KaynMod.csproj": {}
+    "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj": {}
   },
   "projects": {
-    "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\KaynMod.csproj": {
+    "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\KaynMod.csproj",
+        "projectUniqueName": "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj",
         "projectName": "KaynMod",
-        "projectPath": "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\KaynMod.csproj",
-        "packagesPath": "C:\\Users\\k\\.nuget\\packages\\",
-        "outputPath": "C:\\Games\\RimWorld\\Mods\\KaynMod\\project\\obj\\",
+        "projectPath": "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj",
+        "packagesPath": "C:\\Users\\jose-\\.nuget\\packages\\",
+        "outputPath": "C:\\Programacion\\KaynMod\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\k\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jose-\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"

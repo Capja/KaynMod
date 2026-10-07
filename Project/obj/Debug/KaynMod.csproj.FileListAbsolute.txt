@@ -8,3 +8,11 @@ C:\Games\RimWorld\Mods\KaynMod\Assemblies\KaynMod.pdb
 C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.dll
 C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.pdb
 C:\Games\RimWorld\Mods\KaynMod\project\obj\Debug\KaynMod.sourcelink.json
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.csproj.AssemblyReference.cache
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.AssemblyInfoInputs.cache
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.AssemblyInfo.cs
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.csproj.CoreCompileInputs.cache
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.sourcelink.json
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.dll
+C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.pdb
