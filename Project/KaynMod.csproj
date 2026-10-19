@@ -13,8 +13,8 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 
     <!-- Ruta donde se guardará directamente el .dll compilado -->
-    <!-- AJUSTA ESTA RUTA según dónde tengas tu carpeta del mod en RimWorld -->
-    <OutputPath>C:\Games\RimWorld\Mods\KaynMod\Assemblies</OutputPath>
+<!-- Guarda el .dll directamente en la subcarpeta Assemblies/ de tu repositorio -->
+<OutputPath>..\Assemblies\</OutputPath>
   </PropertyGroup>
 
   <!-- Referencias a las librerías del propio RimWorld -->

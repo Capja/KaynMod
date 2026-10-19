@@ -16,3 +16,5 @@ C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.csproj.CoreCompileInputs.cache
 C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.sourcelink.json
 C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.dll
 C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.pdb
+C:\Programacion\KaynMod\Assemblies\KaynMod.dll
+C:\Programacion\KaynMod\Assemblies\KaynMod.pdb

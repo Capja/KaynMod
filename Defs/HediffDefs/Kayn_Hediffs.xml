@@ -20,6 +20,7 @@
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
+          MentalBreakThreshold>-0.2</MentalBreakThreshold>
         </statOffsets>
       </li>
 
@@ -28,6 +29,15 @@
         <minSeverity>1.0</minSeverity>
         <label>Despertado (+500%)</label>
         <becomeVisible>true</becomeVisible>
+
+        <painFactor>0</painFactor><!-- Inmunidad absoluta al dolor: Imposible noquearlo -->
+
+        <!-- Inmunidad a ataques psíquicos hostiles -->
+        <makeImmuneTo>
+          <li>PsychicShock</li>        <!-- Inmune a Lanza de Choque Psíquico -->
+          <li>PsychicSuppression</li>  <!-- Inmune a la máquina mecanoide de supresión -->
+        </makeImmuneTo>
+
         <!-- Capacidades de la pestaña Salud -->
         <capMods>
           <li>
@@ -53,11 +63,14 @@
         </capMods>
         <!-- Estadísticas físicas, de trabajo y combate -->
         <statOffsets>
+          <MentalBreakThreshold>-0.5</MentalBreakThreshold>
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
           <WorkSpeedGlobal>5.0</WorkSpeedGlobal>          <!-- +500% Velocidad de trabajo -->
           <CarryingCapacity>500</CarryingCapacity>         <!-- +500 kg de carga -->
+          <ResearchSpeed>5.0</ResearchSpeed>             <!-- +500% Investigación -->
+          <MiningSpeed>6.0</MiningSpeed>
           <MeleeDodgeChance>30</MeleeDodgeChance>          <!-- Gran evasión -->
           <ShootingAccuracyPawn>15</ShootingAccuracyPawn>  <!-- Puntería de élite -->
           <ComfyTemperatureMin>-50</ComfyTemperatureMin>   <!-- Resistencia al frío -->
@@ -77,6 +90,15 @@
         <minSeverity>2.0</minSeverity>
         <label>Liberado (+1000%)</label>
         <becomeVisible>true</becomeVisible>
+
+        <painFactor>0</painFactor><!-- Inmunidad absoluta al dolor: Imposible noquearlo -->
+
+        <!-- Inmunidad a ataques psíquicos hostiles -->
+        <makeImmuneTo>
+          <li>PsychicShock</li>        <!-- Inmune a Lanza de Choque Psíquico -->
+          <li>PsychicSuppression</li>  <!-- Inmune a la máquina mecanoide de supresión -->
+        </makeImmuneTo>
+
         <!-- Capacidades de la pestaña Salud -->
         <capMods>
           <li>
@@ -102,9 +124,15 @@
         </capMods>
         <!-- Estadísticas físicas, de trabajo y combate divinas -->
         <statOffsets>
+
+          <!-- Cero colapsos mentales: Jamás romperá su propia base -->
+          <MentalBreakThreshold>-1.0</MentalBreakThreshold>
+          
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
+          <ResearchSpeed>10.0</ResearchSpeed>            <!-- +2000% Investigación instantánea -->
+          <MiningSpeed>10.0</MiningSpeed> 
           <WorkSpeedGlobal>10.0</WorkSpeedGlobal>          <!-- +1000% Velocidad de trabajo -->
           <CarryingCapacity>1000</CarryingCapacity>        <!-- +1000 kg de carga -->
           <MeleeDodgeChance>90</MeleeDodgeChance>          <!-- Casi intocable -->
@@ -116,10 +144,14 @@
         <statFactors>
           <MeleeDamageFactor>10.0</MeleeDamageFactor>       <!-- x6 daño cuerpo a cuerpo brutal -->
           <IncomingDamageFactor>0.2</IncomingDamageFactor> <!-- Reduce el 80% de todo el daño recibido -->
+          <StaggerDurationFactor>0</StaggerDurationFactor>        <!-- Jamás se frena por disparos -->
           <MeleeCooldownFactor>0.2</MeleeCooldownFactor>       <!-- Golpea el doble de rápido CaC -->
           <AimingDelayFactor>0.1</AimingDelayFactor>           <!-- Apunta 2.5 veces más rápido -->
           <RangedCooldownFactor>0.2</RangedCooldownFactor>
           <Flammability>0</Flammability>                   <!-- El fuego no puede prenderle -->
+          <!-- Prácticamente no necesita comer ni dormir -->
+          <RestFallRateFactor>0.2</RestFallRateFactor>
+          <HungerRateFactor>0.2</HungerRateFactor>
         </statFactors>
       </li>
 

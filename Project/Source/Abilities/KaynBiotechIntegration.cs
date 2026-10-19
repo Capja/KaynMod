@@ -4,17 +4,43 @@ using Verse;
 
 namespace KaynMod
 {
-    // Se ejecuta una sola vez al arrancar el juego
     [StaticConstructorOnStartup]
     public static class KaynBiotechIntegration
     {
         static KaynBiotechIntegration()
         {
-            // Si el jugador no tiene Biotech, no hace nada
-            if (!ModLister.BiotechInstalled) return;
-
             var awakenedDef = DefDatabase<HediffDef>.GetNamedSilentFail(CompKayn.AwakenedHediffDefName);
-            if (awakenedDef?.stages == null) return;
+
+            // =========================================================================
+            // 1. INMUNIDAD AL ZUMBIDO PSÍQUICO NATIVA (SIN HARMONY)
+            // =========================================================================
+            if (awakenedDef != null)
+            {
+                // Lista de pensamientos psíquicos del mapa a anular
+                string[] thoughtsToNullify = new string[] { "PsychicDrone", "PsychicSuppression" };
+
+                foreach (var thoughtName in thoughtsToNullify)
+                {
+                    var thought = DefDatabase<ThoughtDef>.GetNamedSilentFail(thoughtName);
+                    if (thought != null)
+                    {
+                        if (thought.nullifyingHediffs == null)
+                        {
+                            thought.nullifyingHediffs = new List<HediffDef>();
+                        }
+                        // Le decimos al motor de RimWorld que Kayn_Awakened anula este pensamiento
+                        if (!thought.nullifyingHediffs.Contains(awakenedDef))
+                        {
+                            thought.nullifyingHediffs.Add(awakenedDef);
+                        }
+                    }
+                }
+            }
+
+            // =========================================================================
+            // 2. INYECCIÓN GLOBAL DE BIOTECH (ANCHO DE BANDA DE MECANIZADOR)
+            // =========================================================================
+            if (!ModLister.BiotechInstalled || awakenedDef?.stages == null) return;
 
             var bandwidthStat = DefDatabase<StatDef>.GetNamedSilentFail("MechBandwidth");
             var controlGroupsStat = DefDatabase<StatDef>.GetNamedSilentFail("MechControlGroups");
@@ -23,7 +49,6 @@ namespace KaynMod
 
             if (bandwidthStat == null) return;
 
-            // Inyecta el ancho de banda y bonos en TODAS las fases actuales y futuras de Kayn
             foreach (var stage in awakenedDef.stages)
             {
                 if (stage.statOffsets == null)
@@ -31,7 +56,6 @@ namespace KaynMod
                     stage.statOffsets = new List<StatModifier>();
                 }
 
-                // Añade los modificadores globales de mecanizador
                 stage.statOffsets.Add(new StatModifier { stat = bandwidthStat, value = 1000f });
                 if (controlGroupsStat != null) stage.statOffsets.Add(new StatModifier { stat = controlGroupsStat, value = 8f });
                 if (repairSpeedStat != null) stage.statOffsets.Add(new StatModifier { stat = repairSpeedStat, value = 5f });
