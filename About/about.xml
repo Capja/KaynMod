@@ -12,6 +12,7 @@
   <!-- Versiones de RimWorld compatibles -->
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
 
   <!-- Descripción del mod que aparece a la derecha en el menú -->

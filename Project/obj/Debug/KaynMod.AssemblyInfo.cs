@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KaynMod")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43e5714392760876717e08892d692e86f69bd3e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dccbd2bd5191459cc7badfa9238d7b6e2bbbff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("KaynMod")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KaynMod")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

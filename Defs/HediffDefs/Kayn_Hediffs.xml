@@ -20,7 +20,7 @@
           <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
           <PsychicEntropyMax>500</PsychicEntropyMax>
           <PsychicSensitivity>2.0</PsychicSensitivity>
-          MentalBreakThreshold>-0.2</MentalBreakThreshold>
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold>
         </statOffsets>
       </li>
 
