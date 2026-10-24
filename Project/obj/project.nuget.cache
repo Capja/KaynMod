@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nR5KlowjCRs=",
+  "dgSpecHash": "/SKxLilmXFY=",
   "success": true,
-  "projectFilePath": "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj",
+  "projectFilePath": "C:\\Programacion\\KaynMod\\project\\KaynMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jose-\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4871\\krafs.rimworld.ref.1.6.4871.nupkg.sha512",
     "C:\\Users\\jose-\\.nuget\\packages\\krafs.rimworld.ref\\1.7.4985-unstable\\krafs.rimworld.ref.1.7.4985-unstable.nupkg.sha512",

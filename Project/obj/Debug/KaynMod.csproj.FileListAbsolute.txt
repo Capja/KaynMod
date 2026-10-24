@@ -18,3 +18,10 @@ C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.dll
 C:\Programacion\KaynMod\Project\obj\Debug\KaynMod.pdb
 C:\Programacion\KaynMod\Assemblies\KaynMod.dll
 C:\Programacion\KaynMod\Assemblies\KaynMod.pdb
+C:\Programacion\KaynMod\1.6\Assemblies\KaynMod.dll
+C:\Programacion\KaynMod\1.6\Assemblies\KaynMod.pdb
+C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.deps.json
+C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.dll
+C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.pdb
+C:\Programacion\KaynMod\project\obj\Debug\refint\KaynMod.dll
+C:\Programacion\KaynMod\Project\obj\Debug\ref\KaynMod.dll

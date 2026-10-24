@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj": {}
+    "C:\\Programacion\\KaynMod\\project\\KaynMod.csproj": {}
   },
   "projects": {
-    "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj": {
+    "C:\\Programacion\\KaynMod\\project\\KaynMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj",
+        "projectUniqueName": "C:\\Programacion\\KaynMod\\project\\KaynMod.csproj",
         "projectName": "KaynMod",
-        "projectPath": "C:\\Programacion\\KaynMod\\Project\\KaynMod.csproj",
+        "projectPath": "C:\\Programacion\\KaynMod\\project\\KaynMod.csproj",
         "packagesPath": "C:\\Users\\jose-\\.nuget\\packages\\",
-        "outputPath": "C:\\Programacion\\KaynMod\\Project\\obj\\",
+        "outputPath": "C:\\Programacion\\KaynMod\\project\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
