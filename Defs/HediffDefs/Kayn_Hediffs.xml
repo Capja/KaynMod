@@ -99,6 +99,11 @@
           <li>PsychicSuppression</li>  <!-- Inmune a la máquina mecanoide de supresión -->
         </makeImmuneTo>
 
+        <!-- Reducción drástica de la necesidad de comer -->
+        <hungerRateFactor>0.1</hungerRateFactor>
+        <restFallFactor>0.1</restFallFactor>
+        
+
         <!-- Capacidades de la pestaña Salud -->
         <capMods>
           <li>
@@ -149,9 +154,6 @@
           <AimingDelayFactor>0.1</AimingDelayFactor>           <!-- Apunta 2.5 veces más rápido -->
           <RangedCooldownFactor>0.2</RangedCooldownFactor>
           <Flammability>0</Flammability>                   <!-- El fuego no puede prenderle -->
-          <!-- Prácticamente no necesita comer ni dormir -->
-          <RestFallRateFactor>0.2</RestFallRateFactor>
-          <HungerRateFactor>0.2</HungerRateFactor>
         </statFactors>
       </li>
 

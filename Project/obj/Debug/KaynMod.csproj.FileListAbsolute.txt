@@ -24,4 +24,4 @@ C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.deps.json
 C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.dll
 C:\Programacion\KaynMod\1.7\Assemblies\KaynMod.pdb
 C:\Programacion\KaynMod\project\obj\Debug\refint\KaynMod.dll
-C:\Programacion\KaynMod\Project\obj\Debug\ref\KaynMod.dll
+C:\Programacion\KaynMod\project\obj\Debug\ref\KaynMod.dll
